@@ -1,0 +1,17 @@
+{
+	"ArtifactsDest": "build",
+	"Tasks": [
+		"compile",
+		"package"
+	],
+	"BuildConstraints": "linux darwin windows",
+	"PackageVersion": "0.1.4",
+	"TaskSettings": {
+		"publish-github": {
+			"body": "[Changes](https://github.com/minodisk/mav/blob/master/CHANGELOG.md)",
+			"owner": "minodisk",
+			"repository": "mav"
+		}
+	},
+	"ConfigVersion": "0.9"
+}

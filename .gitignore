@@ -22,3 +22,20 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# Domain
+mav
+.goxc.local.json
+build
+homebrew-mav
+bindata.go
+node_modules
+*.log
+
+*.eot
+*.ttf
+*.woff
+*.woff2
+
+client/dist/*
+!client/dist/index.html

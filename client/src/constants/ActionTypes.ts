@@ -1,0 +1,21 @@
+export const ADD_TODO = 'ADD_TODO';
+export const DELETE_TODO = 'DELETE_TODO';
+export const EDIT_TODO = 'EDIT_TODO';
+export const COMPLETE_TODO = 'COMPLETE_TODO';
+export const COMPLETE_ALL = 'COMPLETE_ALL';
+export const CLEAR_COMPLETED = 'CLEAR_COMPLETED';
+
+export const WILL_OPEN_SOCKET = 'WILL_OPEN_SOCKET'
+export const DID_OPEN_SOCKET = 'DID_OPEN_SOCKET'
+export const DID_CLOSE_SOCKET = 'DID_CLOSE_SOCKET'
+
+export const WILL_GET_TREE = 'WILL_GET_TREE';
+export const DID_GET_TREE = 'DID_GET_TREE';
+
+export const WILL_GET_FILE = 'WILL_GET_FILE'
+export const DID_GET_FILE = 'DID_GET_FILE'
+export const WILL_WATCH_FILE = 'WILL_WATCH_FILE'
+export const DID_WATCH_FILE = 'DID_WATCH_FILE'
+export const WILL_UNWATCH_FILE = 'WILL_UNWATCH_FILE'
+export const DID_UNWATCH_FILE = 'DID_UNWATCH_FILE'
+export const DID_CHANGE_FILE = 'DID_CHANGE_FILE'

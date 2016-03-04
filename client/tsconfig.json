@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "sourceMap": true
+  },
+  "files": [
+    "./src/index.tsx",
+    "./typings/tsd.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
