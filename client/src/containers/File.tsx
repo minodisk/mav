@@ -1,5 +1,11 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+// import remark from 'remark'
+// import reactRenderer from 'remark-react'
+const remark = require('remark')
+const reactRenderer = require('remark-react')
+// import hljs from 'remark-highlight.js'
+// import Highlight from 'react-highlight'
 
 import { Connection } from '../models/socket'
 import { File } from '../models/file'
@@ -9,7 +15,18 @@ import {
   unwatchFile
 } from '../actions/file'
 
+let processor = remark.use(reactRenderer, {createElement: React.createElement})
+let process = processor.process.bind(processor)
+let options = {
+  gfm: true,
+  yaml: true,
+  commonmark: true,
+  footnotes: true,
+  breaks: true
+}
+
 const styles = require('../styles/content.css')
+const markdownStyle = require ('../../node_modules/github-markdown-css/github-markdown.css')
 
 interface Props {
   location: any;
@@ -44,10 +61,11 @@ class Markdown extends React.Component<Props, State> {
 
   render() {
     if (this.props.file == null) {
-      return (<pre></pre>)
+      return (<div></div>)
     }
+    console.log(process(this.props.file.content, options))
     return (
-      <pre>{this.props.file.content}</pre>
+      <div className='markdown-body markdownContent'>{process(this.props.file.content, options)}</div>
     );
   }
 }

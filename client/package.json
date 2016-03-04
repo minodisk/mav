@@ -13,6 +13,7 @@
     "autoprefixer": "^6.3.3",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
+    "json-loader": "^0.5.4",
     "postcss-loader": "^0.8.1",
     "postcss-modules-local-by-default": "^1.0.1",
     "postcss-url": "^5.1.1",
@@ -30,6 +31,7 @@
     "classnames": "^2.2.3",
     "es6-promise": "^3.1.2",
     "eventemitter3": "^1.1.1",
+    "github-markdown-css": "^2.2.1",
     "lodash": "^4.5.1",
     "material-design-icons": "^2.2.0",
     "material-ui": "^0.14.4",
@@ -45,6 +47,6 @@
     "redux-router": "^1.0.0-beta7",
     "redux-thunk": "^1.0.3",
     "remark": "^4.1.1",
-    "remark-react": "^1.1.0"
+    "remark-react": "^2.0.0"
   }
 }
