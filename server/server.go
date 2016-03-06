@@ -35,7 +35,7 @@ func Start() {
 }
 
 var (
-	rStatic = regexp.MustCompile(`^\/[^\/]*\.(html|js(\.map)?|eot|ttf|woff2?)$`)
+	rStatic = regexp.MustCompile(`^\/[^\/]*\.(html|css|js(\.map)?|eot|ttf|woff2?)$`)
 )
 
 func initServer() (err error) {
