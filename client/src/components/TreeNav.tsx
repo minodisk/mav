@@ -20,7 +20,8 @@ interface State {
 export default class TreeNav extends React.Component<Props, State> {
   constructor(props) {
     super(props)
-    this.state = {open: false}
+    this.state = {open: true}
+    document.body.addEventListener('keydown', this.onKeyDown, false)
   }
 
   render() {
@@ -28,15 +29,28 @@ export default class TreeNav extends React.Component<Props, State> {
     return (
       <LeftNav
         className={leftNav}
+        width={400}
         open={this.state.open}
       >
         <Paper className={leftNavInner}>
           <Tree
             indent={0}
             tree={tree}
-            />
+          />
         </Paper>
       </LeftNav>
     );
+  }
+
+  onKeyDown = (e) => {
+    switch (e.keyCode) {
+      case 70: // f
+        this.toggleOpen()
+        break
+    }
+  }
+
+  toggleOpen() {
+    this.setState({ open: !this.state.open })
   }
 }

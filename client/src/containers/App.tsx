@@ -18,20 +18,27 @@ import { Todo } from '../models/todos';
 
 const styles = require('../styles/app.css')
 
-interface AppProps {
+interface Props {
   todos?: Todo[];
   tree?: Tree;
   dispatch?: Dispatch;
   children: any;
 }
 
-class App extends React.Component<AppProps, void> {
+interface State {
+}
+
+class App extends React.Component<Props, State> {
   render() {
     const { todos, tree, dispatch, children } = this.props;
     const actions = bindActionCreators(TodoActions, dispatch);
 
     return (
-      <div>
+      <div
+        onDragEnter={this.onDragEnter}
+        onDragOver={this.onDragOver}
+        onDrop={this.onDrop}
+      >
         <TreeNav
           addTodo={actions.addTodo}
           tree={tree}
@@ -41,6 +48,27 @@ class App extends React.Component<AppProps, void> {
         </section>
       </div>
     );
+  }
+
+  onDragEnter = (e) => {
+    console.log('ondragenter:', e)
+    this.cancelEvent(e)
+  }
+
+  onDragOver = (e) => {
+    console.log('ondragover:', e)
+    this.cancelEvent(e)
+  }
+
+  onDrop = (e) => {
+    console.log('ondrop:', e.dataTransfer.files[0].name)
+    console.log('ondrop:', e.dataTransfer.files[0].fullPath)
+    this.cancelEvent(e)
+  }
+
+  cancelEvent(e) {
+    e.preventDefault()
+    e.stopPropagation()
   }
 }
 

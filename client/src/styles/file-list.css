@@ -1,7 +1,9 @@
-.leftNav {
-  z-index: 1000 !important;
+.leftNavInner {
+  /* padding-top: 72px; */
 }
 
 .leftNavInner {
-  padding-top: 72px;
+  ul {
+    margin: 0;
+  }
 }

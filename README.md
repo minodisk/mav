@@ -12,7 +12,6 @@ Previewer for markdown files in browser
 - Live preview: update when the viewing file is changed
 - Lightweight: you can view huge file without UI blocking
 
-
 ## Install
 
 ### Binary

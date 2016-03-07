@@ -18,7 +18,6 @@ func initWatcher() (err error) {
 
 	log.Println("init watcher")
 
-	// go func() {
 	for {
 		select {
 		case event := <-watcher.Events:
@@ -37,7 +36,6 @@ func initWatcher() (err error) {
 			log.Println("error: ", err)
 		}
 	}
-	// }()
 
 	log.Println("init watcher complete")
 
