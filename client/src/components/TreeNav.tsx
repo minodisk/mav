@@ -20,7 +20,7 @@ interface State {
 export default class TreeNav extends React.Component<Props, State> {
   constructor(props) {
     super(props)
-    this.state = {open: true}
+    this.state = {open: false}
   }
 
   render() {

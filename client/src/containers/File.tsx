@@ -26,7 +26,8 @@ let options = {
 }
 
 const styles = require('../styles/content.css')
-// const markdownStyle = require ('../../node_modules/github-markdown-css/github-markdown.css')
+const githubCSS = require('github-markdown-css')
+// const qiitaCSS = require('../styles/qiita-css.scss')
 
 interface Props {
   location: any;

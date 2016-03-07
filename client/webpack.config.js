@@ -36,6 +36,23 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        include: /node_modules/,
+        loaders: [
+          'style',
+          'css',
+        ]
+      },
+      {
+        test: /\.s[ca]ss$/,
+        loaders: [
+          'style',
+          'css',
+          'sass',
+        ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
         loaders: [
           'style',
           'css?sourceMap',

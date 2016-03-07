@@ -1,13 +1,13 @@
 @import '../../node_modules/material-design-icons/iconfont/material-icons.css';
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
+/* html, body {  */
+/*   margin: 0;  */
+/*   padding: 0; */
+/* }             */
 
-body {
-  font-size: 14px;
-}
+/* body {             */
+/*   font-size: 14px; */
+/* }                  */
 
 /* ul {                     */
 /*   margin: 0;             */
@@ -18,10 +18,22 @@ body {
 /*   list-style-type: none; */
 /* }                        */
 
+/* .content {                         */
+/*   margin-top: 48px;                */
+/*   margin-left: calc(72px + 256px); */
+/*   margin-bottom: 48px;             */
+/*   margin-right: 72px;              */
+/*   min-height: 400px;               */
+/* }                                  */
+
 .content {
-  margin-top: 48px;
-  margin-left: calc(72px + 256px);
-  margin-bottom: 48px;
-  margin-right: 72px;
-  min-height: 400px;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ddd;
+  padding: 45px;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
 }

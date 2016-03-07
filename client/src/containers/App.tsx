@@ -32,9 +32,6 @@ class App extends React.Component<AppProps, void> {
 
     return (
       <div>
-        <AppBar
-          title='qiitactl'
-        />
         <TreeNav
           addTodo={actions.addTodo}
           tree={tree}

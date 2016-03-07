@@ -1,0 +1,5 @@
+@import "../../node_modules/qiita-coat/scss/_markdown.scss";
+
+.markdown-body {
+  @include markdown;
+}
